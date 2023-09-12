@@ -1,0 +1,153 @@
+/* inport google font */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* normaliztion */
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    background-image: url(images/bg-pattern-top.svg);
+    width: 500px;
+    height: 500px;
+    top: 0px;
+    left: 60px;
+    transform: scale(1.2, 1.1) rotateX(180deg) rotate(90deg);
+}
+
+main::after {
+    content: "";
+    position: absolute;
+    background-image: url(images/bg-pattern-bottom.svg);
+    width: 500px;
+    height: 500px;
+    right: -11px;
+    bottom: -157px;
+    transform: rotate(30deg);
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+.card .image,
+.card .image img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.card .about .vector {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    height: 75px;
+}
+
+.card .about .vector img {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    top: -57px;
+}
+
+.card .about .info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.card .about .info .name {
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card .about .info .name span,
+.card .about .info .country {
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.card .about .info .name span {
+    margin-left: 5px;
+}
+
+hr {
+    border-color: hsl(0deg 0% 59% / 25%);
+    border-style: solid;
+}
+
+.social .k {
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(229, 23%, 23%);
+    display: flex;
+    justify-content: center;
+}
+
+.social p {
+    font-size: 12px;
+    color: hsl(227, 10%, 46%);
+    margin-top: 6px;
+    letter-spacing: 1.5px;
+}
+
+.card .about .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 91px;
+}
+
+@media (max-width:500px){
+    .card {
+        width: 320px;
+        height: 370px;
+    }
+
+    .card .image img {
+        width: 100%;
+    }
+
+    main::before {
+        width: 300px;
+        height: 300px;
+        left: -30px;
+    }
+
+    main::after {
+        right: -177px;
+        bottom: -256px;
+        transform: rotate(-20deg);
+    }
+
+    .about .social {
+        padding: 0 20px;
+    }
+}
